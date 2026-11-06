@@ -1,0 +1,202 @@
+/* ==========================================
+   RESET DE ESTILOS & VARIÁVEIS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #1e3a8a; /* Azul escuro acadêmico */
+    --secondary-color: #c2410c; /* Tom quente para lembrar a ODS 4 */
+    --bg-light: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   HERO / CABEÇALHO
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   LAYOUT E CONTAINER
+   ========================================== */
+.container {
+    max-width: 1000px;
+    margin: -30px auto 60px auto; /* Sobe os primeiros blocos em cima do banner */
+    padding: 0 20px;
+}
+
+.section-title {
+    margin: 40px 0 20px 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-left: 12px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* ==========================================
+   CARDS (CARTÕES DE CONTEÚDO)
+   ========================================== */
+.intro-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary-color);
+}
+
+.intro-card h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empurra o botão sempre para o final do card */
+}
+
+/* Bordas coloridas para as matérias */
+.border-biologia { border-top: 4px solid #3b82f6; }
+.border-filosofia { border-top: 4px solid #ec4899; }
+.border-fisica { border-top: 4px solid #ffe604; }
+.border-geografia { border-top: 4px solid #ffa200; }
+.border-historia { border-top: 4px solid #6e4805; }
+.border-linguagem { border-top: 4px solid #0be5f5; }
+.border-matematica { border-top: 4px solid #f50b0b; }
+.border-quimica { border-top: 4px solid #379612; }
+.border-redação { border-top: 4px solid #ff02ab; }
+
+/* ==========================================
+   BOTÕES / LINKS
+   ========================================== */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-alt {
+    background-color: #f1f5f9;
+    color: var(--primary-color);
+    border: 1px solid #e2e8f0;
+}
+
+.btn-alt:hover {
+    background-color: #e2e8f0;
+    color: #1d4ed8;
+}
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+}
+
+.footer-content strong {
+    color: var(--white);
+}
+
+.ods-tag {
+    color: #fb923c;
+    font-weight: 600;
+    margin-top: 15px;
+}
